@@ -1,0 +1,19 @@
+{
+  "name": "rest-daraz",
+  "version": "1.0.0",
+  "description": "A Node.js RESTful API by Prerana Pandit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "restful",
+    "api"
+  ],
+  "author": "Prerana Pandit",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
