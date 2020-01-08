@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
+//Handle incoming GET requests to /orders
 router.get('/',(req, res, next) => {
      res.status(200).json({
          message: 'Orders are fetched'
@@ -16,7 +17,7 @@ router.post('/',(req, res, next) => {
 router.get('/:orderId',(req, res,next) => {
       const orderId = req.params.orderId;
 
-      if(id === 'special'){
+      if(orderId === 'special'){
           res.status(200).json({
               message: 'order details',
               orderId: orderId
