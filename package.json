@@ -4,8 +4,8 @@
   "description": "A Node.js RESTful API by Prerana Pandit",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon --ignore ./public/uploads index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "node",
@@ -15,11 +15,15 @@
   "author": "Prerana Pandit",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^4.13.20",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "multer": "^1.4.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
