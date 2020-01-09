@@ -1,13 +1,5 @@
 const mongoose = require('mongoose');
 
-const pschema= new mongoose.Schema({
-
-    item:{
-        type:String,
-        require:true
-    }
-    
-    });
 
 const productsSchema = new mongoose.Schema({
 
@@ -21,14 +13,9 @@ const productsSchema = new mongoose.Schema({
     },
     image: {
         type: String
-    },
-    item:{
-        type:String,
-        required:true
-    },
+    }
 
-    product:[pschema]
-},{timestamps:true}
-);
+
+}, { timestamps: true });
 
 module.exports = mongoose.model('Product', productsSchema);
