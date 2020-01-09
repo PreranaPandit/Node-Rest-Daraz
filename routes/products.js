@@ -33,8 +33,35 @@ const fileFilter = (req, file, cb) => {
 
 
 
+//products route started
+  const Product = require("../models/products");
+
+  //route for adding products
+  router.post("/", upload.single("product_image"), (req, res) => {
+      const product = new Product({
+          name: req.body.name,
+          price: req.body.price,
+          image:req.file.path
+      });
+
+      product
+           .save()
+            .then(result => {
+                res.status(201).json({
+                    message: "Product added succesffully"
+                });
+            })
+            .catch(err => {
+                console.log(err);
+                res.status(500).json({
+                    message: err
+                });
+            });
+  });
 
   
+
+
 
 
 module.exports = router;
